@@ -34,13 +34,9 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.dll
-*.gbc
-*.bhc
 *.sln
 *.suo
 *.tmp
-*.dylib
 *.user
 *.userprefs
 *.pidb
@@ -50,6 +46,10 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.dylib
+*.dll
+*.gbc
+*.bhc
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -65,6 +65,8 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+Nanotech-Odyssey/Library/Artifacts/*
+
 # Crashlytics generated file
 crashlytics-build.properties
 
@@ -74,4 +76,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-Nanotech-Odyssey/Library/Artifacts/*
+Nanotech-Odyssey/Library/ArtifactDB
