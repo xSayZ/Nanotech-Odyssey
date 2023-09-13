@@ -34,9 +34,13 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
+*.dll
+*.gbc
+*.bhc
 *.sln
 *.suo
 *.tmp
+*.dylib
 *.user
 *.userprefs
 *.pidb
@@ -70,3 +74,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Nanotech-Odyssey/Library/Artifacts/*
