@@ -52,6 +52,7 @@ public class InputManager : MonoBehaviour
     {
         if (context.performed)
         {
+            Debug.Log(context.duration);
             firePressed = true;
         }
         else if (context.canceled)
@@ -72,10 +73,11 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    //Bool commented out to get desired effect of being able to hold to shoot
     public bool GetFirePressed()
     {
         bool result = firePressed;
-        firePressed = false;
+        //firePressed = false;
         return result;
     }
 

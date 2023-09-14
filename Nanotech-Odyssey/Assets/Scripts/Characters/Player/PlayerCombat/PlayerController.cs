@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
         bool fireInput = InputManager.GetInstance().GetFirePressed();
         bool reloadInput = InputManager.GetInstance().GetReloadPressed();
 
+        Debug.Log(fireInput);
+
         movement.HandleFixedUpdate(movementInput);
         combat.Fire(fireInput);
         combat.Reload(reloadInput);
