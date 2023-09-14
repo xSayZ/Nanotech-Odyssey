@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: projectiles x3_0
+      name: projectile_green_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 714
-        width: 30
-        height: 9
+        x: 0
+        y: 672
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +150,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_1
+      name: projectile_green_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 714
-        width: 30
-        height: 9
+        x: 96
+        y: 672
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,13 +171,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_2
+      name: projectile_green_3
       rect:
         serializedVersion: 2
-        x: 225
-        y: 714
-        width: 30
-        height: 9
+        x: 192
+        y: 672
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,13 +192,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_3
+      name: projectile_green_4
       rect:
         serializedVersion: 2
-        x: 321
-        y: 714
-        width: 30
-        height: 9
+        x: 288
+        y: 672
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,97 +213,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectile_blue_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 618
-        width: 30
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e00158a6b4674644a1b302f6ff24980
-      internalID: -378848146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectile_blue_2
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 618
-        width: 30
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9362627ec583b984cb55f07447abd3e7
-      internalID: 2038040049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectile_blue_3
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 618
-        width: 30
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f9d7dd5b78d7514abb49e31109d2a91
-      internalID: 567504975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectile_blue_4
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 618
-        width: 30
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9a92b493e8ba904a81c1eb995a120cc
-      internalID: 572123346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: projectiles x3_8
       rect:
         serializedVersion: 2
-        x: 39
-        y: 516
-        width: 18
-        height: 18
+        x: 0
+        y: 480
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +237,10 @@ TextureImporter:
       name: projectiles x3_9
       rect:
         serializedVersion: 2
-        x: 135
-        y: 516
-        width: 15
-        height: 18
+        x: 96
+        y: 480
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +258,10 @@ TextureImporter:
       name: projectiles x3_10
       rect:
         serializedVersion: 2
-        x: 231
-        y: 516
-        width: 18
-        height: 18
+        x: 192
+        y: 480
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +279,10 @@ TextureImporter:
       name: projectiles x3_11
       rect:
         serializedVersion: 2
-        x: 327
-        y: 516
-        width: 18
-        height: 18
+        x: 288
+        y: 480
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +300,10 @@ TextureImporter:
       name: projectiles x3_12
       rect:
         serializedVersion: 2
-        x: 39
-        y: 420
-        width: 18
-        height: 18
+        x: 0
+        y: 384
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +321,10 @@ TextureImporter:
       name: projectiles x3_13
       rect:
         serializedVersion: 2
-        x: 87
-        y: 228
-        width: 10
-        height: 18
+        x: 96
+        y: 384
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,10 +342,10 @@ TextureImporter:
       name: projectiles x3_14
       rect:
         serializedVersion: 2
-        x: 87
-        y: 324
-        width: 9
-        height: 18
+        x: 192
+        y: 384
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +363,10 @@ TextureImporter:
       name: projectiles x3_15
       rect:
         serializedVersion: 2
-        x: 135
-        y: 420
-        width: 15
-        height: 18
+        x: 288
+        y: 384
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,34 +381,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_16
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 246
-        width: 9
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e128dd12ae8c81c4e8dc9a2874b445c8
-      internalID: -818900467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: projectiles x3_17
       rect:
         serializedVersion: 2
-        x: 183
-        y: 207
-        width: 9
-        height: 21
+        x: 0
+        y: 288
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,10 +405,10 @@ TextureImporter:
       name: projectiles x3_18
       rect:
         serializedVersion: 2
-        x: 183
-        y: 303
-        width: 9
-        height: 21
+        x: 96
+        y: 288
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,10 +426,10 @@ TextureImporter:
       name: projectiles x3_19
       rect:
         serializedVersion: 2
-        x: 183
-        y: 342
-        width: 9
-        height: 21
+        x: 192
+        y: 288
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,34 +444,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_20
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 420
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8044deab01736264facd0b001f3c7380
-      internalID: -122887366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: projectiles x3_21
       rect:
         serializedVersion: 2
-        x: 327
-        y: 420
-        width: 18
-        height: 18
+        x: 0
+        y: 192
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,10 +468,10 @@ TextureImporter:
       name: projectiles x3_23
       rect:
         serializedVersion: 2
-        x: 24
-        y: 129
-        width: 45
-        height: 27
+        x: 192
+        y: 192
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,55 +486,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_24
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 129
-        width: 69
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 266d3b776b0c6754b8f6b0e77f628aa8
-      internalID: -952722148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectiles x3_25
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 129
-        width: 45
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60abd7f9792c571429712fa6281c7ee4
-      internalID: 760028201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: projectiles x3_26
       rect:
         serializedVersion: 2
-        x: 315
-        y: 129
-        width: 42
-        height: 27
+        x: 0
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +510,10 @@ TextureImporter:
       name: projectiles x3_28
       rect:
         serializedVersion: 2
-        x: 6
-        y: 0
-        width: 84
-        height: 54
+        x: 192
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,10 +531,10 @@ TextureImporter:
       name: projectiles x3_29
       rect:
         serializedVersion: 2
-        x: 102
-        y: 0
-        width: 87
-        height: 52
+        x: 288
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,34 +549,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_30
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52a464095e24cdf41a2757622e444326
-      internalID: 1298187123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: projectiles x3_31
       rect:
         serializedVersion: 2
-        x: 246
-        y: 18
-        width: 39
-        height: 30
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,10 +573,10 @@ TextureImporter:
       name: projectiles x3_32
       rect:
         serializedVersion: 2
-        x: 300
-        y: 42
-        width: 12
-        height: 10
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,10 +594,10 @@ TextureImporter:
       name: projectiles x3_33
       rect:
         serializedVersion: 2
-        x: 368
-        y: 42
-        width: 16
-        height: 10
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,10 +615,10 @@ TextureImporter:
       name: projectiles x3_22
       rect:
         serializedVersion: 2
-        x: 281
-        y: 359
-        width: 5
-        height: 5
+        x: 96
+        y: 192
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,10 +636,10 @@ TextureImporter:
       name: projectiles x3_27
       rect:
         serializedVersion: 2
-        x: 281
-        y: 302
-        width: 5
-        height: 5
+        x: 96
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,10 +657,10 @@ TextureImporter:
       name: projectiles x3_34
       rect:
         serializedVersion: 2
-        x: 281
-        y: 263
-        width: 5
-        height: 5
+        x: 288
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -864,13 +675,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_35
+      name: projectile_blue_1
       rect:
         serializedVersion: 2
-        x: 281
-        y: 206
-        width: 5
-        height: 5
+        x: 0
+        y: 576
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -878,20 +689,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88d06be4ee7852347951c67c0667dc2b
-      internalID: -1257052443
+      spriteID: 53048f35bc1e3304ca4b524eeb4bbd26
+      internalID: -1991544776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_36
+      name: projectile_blue_2
       rect:
         serializedVersion: 2
-        x: 377
-        y: 206
-        width: 5
-        height: 5
+        x: 96
+        y: 576
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -899,20 +710,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691b35628a27868418f0d328fcf450e1
-      internalID: -464301700
+      spriteID: b9e46506d3f73894a95a8b2e78a791ff
+      internalID: -249019545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_37
+      name: projectile_blue_3
       rect:
         serializedVersion: 2
-        x: 377
-        y: 263
-        width: 5
-        height: 5
+        x: 192
+        y: 576
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -920,20 +731,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6f772186fad034ab536ff53d341b76
-      internalID: -2144520753
+      spriteID: c6801f8d3cd4b4949a05c95efa0848e0
+      internalID: 9050237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_38
+      name: projectile_blue_4
       rect:
         serializedVersion: 2
-        x: 377
-        y: 302
-        width: 5
-        height: 5
+        x: 288
+        y: 576
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -941,29 +752,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850bd3fd73dd4f346a161340b3cce9ea
-      internalID: -520362150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectiles x3_39
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 359
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a09e4dae30863ac43afe94b2f77bdf9a
-      internalID: -2111493207
+      spriteID: dae0f3b39326e4a448a7b7c798f94690
+      internalID: -1371503571
       vertices: []
       indices: 
       edges: []
@@ -979,12 +769,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      projectile_blue_1: -378848146
-      projectile_blue_2: 2038040049
-      projectile_blue_3: 567504975
-      projectile_blue_4: 572123346
-      projectiles x3_0: 536904097
-      projectiles x3_1: -464104964
+      projectile_blue_1: -1991544776
+      projectile_blue_2: -249019545
+      projectile_blue_3: 9050237
+      projectile_blue_4: -1371503571
+      projectile_green_1: 536904097
+      projectile_green_2: -464104964
+      projectile_green_3: 706860688
+      projectile_green_4: 2021396596
       projectiles x3_10: -1333156115
       projectiles x3_11: 1865751491
       projectiles x3_12: -880966353
@@ -995,7 +787,6 @@ TextureImporter:
       projectiles x3_17: 1229567663
       projectiles x3_18: 970209392
       projectiles x3_19: -1401457236
-      projectiles x3_2: 706860688
       projectiles x3_20: -122887366
       projectiles x3_21: -342918227
       projectiles x3_22: -407093413
@@ -1006,17 +797,11 @@ TextureImporter:
       projectiles x3_27: -2083251757
       projectiles x3_28: -181864017
       projectiles x3_29: 105494410
-      projectiles x3_3: 2021396596
       projectiles x3_30: 1298187123
       projectiles x3_31: -1661571551
       projectiles x3_32: -1714876473
       projectiles x3_33: 1584369347
       projectiles x3_34: -2121772946
-      projectiles x3_35: -1257052443
-      projectiles x3_36: -464301700
-      projectiles x3_37: 107842589
-      projectiles x3_38: -2144520753
-      projectiles x3_39: -520362150
       projectiles x3_8: -265446712
       projectiles x3_9: -2025230500
   spritePackingTag: 
