@@ -5,36 +5,58 @@ using UnityEngine;
 public class PlayerCombatHandler : MonoBehaviour
 {    
 
-
+    public enum FireState
+    {
+        Idle,
+        Firing,
+        Reloading
+    }
 
     [Header("References")]
     [SerializeField] private PlayerController controller;
-    [SerializeField] private BaseWeapon baseWeapon;
+    [SerializeField] private LaserWeapon laserWeapon;
+    [SerializeField] public GameObject firePoint;
+    private FireState currentState = FireState.Idle;
     void Awake()
     {
         controller = GetComponent<PlayerController>();
-        baseWeapon = GetComponentInChildren<BaseWeapon>();
+        laserWeapon = GetComponentInChildren<LaserWeapon>();
     }
 
-    public void PlayerToFire(bool canFire)
+    public void HandleWeaponState(bool canFire, bool canReload)
     {
-        if (canFire)
+        switch (currentState)
         {
-            // Implement Shooting Projectiles
-            baseWeapon.Fire();
+            case FireState.Idle:
+                if (canFire && Time.time >= laserWeapon.fireCooldown && laserWeapon.currentAmmo > 0)
+                {
+                    currentState = FireState.Firing;
 
-            controller.OnFire();
-        }
-    }
-
-    public void PlayerToReload(bool canReload)
-    {
-        if (canReload)
-        {
-            // If bullets are full, return
-            // Otherwise reload
-
-            controller.OnReload();
+                    laserWeapon.Fire(firePoint);
+                    controller.OnFire();
+                }
+                if (canReload && laserWeapon.currentAmmo < laserWeapon.maxAmmo)
+                {
+                    currentState = FireState.Reloading;
+                }
+                break;
+            case FireState.Firing:
+                if (!canFire)
+                {
+                    currentState = FireState.Idle;
+                }
+                else if (canFire && Time.time >= laserWeapon.fireCooldown && laserWeapon.currentAmmo > 0)
+                {
+                    laserWeapon.Fire(firePoint);
+                    controller.OnFire();
+                }
+                break;
+            case FireState.Reloading:
+                Debug.Log("reload");
+                laserWeapon.Reload();
+                controller.OnReload();
+                currentState = FireState.Idle;
+                break;
         }
     }
 }

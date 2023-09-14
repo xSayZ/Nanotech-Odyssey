@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<PlayerController>();
     }
 
-    public void HandleFixedUpdate(Vector2 movementInput)
+    public void HandleFixedUpdate(Vector2 movementInput, Vector2 aimInput)
     {
         HandleHorizontalMovement(movementInput);
 
@@ -86,10 +86,7 @@ public class PlayerMovement : MonoBehaviour
         // Switch the way the player is labelled as facing
         facingRight = !facingRight;
 
-        // Multiply the player's x local scale by -1
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
 
+        transform.Rotate(0, 180f, 0);
     }
 }

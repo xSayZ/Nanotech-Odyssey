@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private float projectileSpeed = 2f;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] private float projectileSpeed = 4f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * projectileSpeed * Time.deltaTime;
+        rb.velocity = transform.right * projectileSpeed;
     }
 }

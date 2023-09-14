@@ -7,8 +7,15 @@ public class LaserWeapon : BaseWeapon
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private GameObject projectile;
 
-    public override void Fire()
+    public override void Fire(GameObject firePoint)
     {
-        projectile = Instantiate(projectile, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+        fireCooldown = Time.time + 1f / fireRate;
+        currentAmmo--;
+        projectile = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
+    }
+
+    public override void Reload()
+    {
+        currentAmmo = maxAmmo;
     }
 }

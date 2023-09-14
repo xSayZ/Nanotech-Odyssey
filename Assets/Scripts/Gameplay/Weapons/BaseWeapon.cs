@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class BaseWeapon : MonoBehaviour
 {
-    [SerializeField] private float fireRate;
-    [SerializeField] private float fireCooldown;
-    [SerializeField] private int maxAmmo;
-    [SerializeField] private int currentAmmo;
+    [SerializeField] public float fireRate;
+    [SerializeField] public float fireCooldown;
+    [SerializeField] public int maxAmmo;
+    [SerializeField] public int currentAmmo;
 
-    public virtual void Fire()
+    void Start()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+    public virtual void Fire(GameObject firePoint)
     {
         Debug.Log("Brrrr Brrrr");
     }

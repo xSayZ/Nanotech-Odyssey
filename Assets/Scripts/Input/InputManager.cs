@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     public PlayerInput playerInput;
 
     private Vector2 movementInput;
+    private Vector2 aimInput;
     private bool interactPressed = false;
     private bool submitPressed = false;
     private bool pausePressed = false;
@@ -43,16 +44,32 @@ public class InputManager : MonoBehaviour
             movementInput = context.ReadValue<Vector2>();
         }
     }
+    public void AimPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            movementInput = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            movementInput = context.ReadValue<Vector2>();
+        }
+    }
+
     public Vector2 GetMoveDirection()
     {
         return movementInput;
+    }
+
+    public Vector3 GetAimDirection()
+    {
+        return aimInput;
     }
 
     public void FirePressed(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            Debug.Log(context.duration);
             firePressed = true;
         }
         else if (context.canceled)

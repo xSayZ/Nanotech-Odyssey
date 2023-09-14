@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerCombatHandler combat;
 
     Vector2 movementInput;
+    Vector2 aimInput;
     public PlayerState playerState;
 
     void Awake()
@@ -51,14 +52,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         movementInput = InputManager.GetInstance().GetMoveDirection();
+        aimInput = InputManager.GetInstance().GetAimDirection();
         bool fireInput = InputManager.GetInstance().GetFirePressed();
         bool reloadInput = InputManager.GetInstance().GetReloadPressed();
 
-        Debug.Log(fireInput);
-
-        movement.HandleFixedUpdate(movementInput);
-        combat.PlayerToFire(fireInput);
-        combat.PlayerToReload(reloadInput);
+        movement.HandleFixedUpdate(movementInput, aimInput);
+        combat.HandleWeaponState(fireInput, reloadInput);
     }
 
     public void OnFire()
