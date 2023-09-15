@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class LaserWeapon : BaseWeapon
 {
-    [SerializeField] private AudioClip audioClip;
-    [SerializeField] private GameObject projectile;
 
     public override void Fire(GameObject firePoint)
     {
-        fireCooldown = Time.time + 1f / fireRate;
-        currentAmmo--;
-        projectile = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
+        base.Fire(firePoint);
     }
 
     public override void Reload()
     {
-        currentAmmo = maxAmmo;
+        base.Reload();
     }
 }

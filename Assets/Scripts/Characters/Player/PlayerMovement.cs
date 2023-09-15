@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public enum PlayerState
+    {
+        Idle,
+        Running,
+        Dashing
+    }
+
+    public PlayerState playerState;
 
     [Header("References")]
     [SerializeField] private PlayerController controller;
@@ -27,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleHorizontalMovement(movementInput);
 
-        controller.playerState = PlayerController.PlayerState.Idle;
+        playerState = PlayerState.Idle;
 
         if (movementInput != Vector2.zero)
         {
@@ -57,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (count == 0)
         {
-            controller.playerState = PlayerController.PlayerState.Running;
+            playerState = PlayerState.Running;
             controller.rb.MovePosition(controller.rb.position + direction * moveSpeed * Time.fixedDeltaTime);
             return true;
         }

@@ -7,12 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
-    public enum PlayerState
-    {
-        Idle,
-        Running,
-        Dashing
-    }
 
     [Header("Player Variables")]
     [SerializeField] private int health = 3;
@@ -20,19 +14,15 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Animator animator;
-    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerCombatHandler combat;
 
     Vector2 movementInput;
     Vector2 aimInput;
-    public PlayerState playerState;
-
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombatHandler>();
     }
