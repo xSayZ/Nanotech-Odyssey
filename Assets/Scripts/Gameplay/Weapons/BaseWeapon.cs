@@ -21,7 +21,7 @@ public class BaseWeapon : MonoBehaviour
         currentAmmo = maxAmmo;
     }
 
-    public virtual void Fire(GameObject firePoint)
+    public virtual void Fire(Transform firePoint)
     {
         fireCooldown = Time.time + 1f / fireRate;
         currentAmmo--;

@@ -486,7 +486,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_26
+      name: projectile_missile_1
       rect:
         serializedVersion: 2
         x: 0
@@ -507,7 +507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_28
+      name: projectile_missile_3
       rect:
         serializedVersion: 2
         x: 192
@@ -528,10 +528,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_29
+      name: projectile_missile_4
       rect:
         serializedVersion: 2
-        x: 288
+        x: 289
         y: 96
         width: 96
         height: 96
@@ -633,7 +633,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles x3_27
+      name: projectile_missile_2
       rect:
         serializedVersion: 2
         x: 96
@@ -777,6 +777,10 @@ TextureImporter:
       projectile_green_2: -464104964
       projectile_green_3: 706860688
       projectile_green_4: 2021396596
+      projectile_missile_1: 1516591288
+      projectile_missile_2: -2083251757
+      projectile_missile_3: -181864017
+      projectile_missile_4: 105494410
       projectiles x3_10: -1333156115
       projectiles x3_11: 1865751491
       projectiles x3_12: -880966353
@@ -793,10 +797,6 @@ TextureImporter:
       projectiles x3_23: -1493072211
       projectiles x3_24: -952722148
       projectiles x3_25: 760028201
-      projectiles x3_26: 1516591288
-      projectiles x3_27: -2083251757
-      projectiles x3_28: -181864017
-      projectiles x3_29: 105494410
       projectiles x3_30: 1298187123
       projectiles x3_31: -1661571551
       projectiles x3_32: -1714876473

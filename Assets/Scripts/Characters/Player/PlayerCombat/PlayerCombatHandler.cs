@@ -15,7 +15,7 @@ public class PlayerCombatHandler : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerController controller;
     [SerializeField] private LaserWeapon laserWeapon;
-    [SerializeField] public GameObject firePoint;
+    [SerializeField] public Transform firePoint;
     private FireState currentState = FireState.Idle;
     void Awake()
     {
