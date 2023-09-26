@@ -8,4 +8,8 @@ public interface IEnemyState
 
     void OnTriggerEnter(Collider2D other);
 
+    void OnEnter();
+
+    void OnExit();
+
 }

@@ -5,9 +5,6 @@ using UnityEngine;
 public class AlertState : IEnemyState
 {
     private readonly StatePatternEnemy enemy;
-    private float searchTimer;
-    bool rotateLeft = true;
-
     public AlertState(StatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
@@ -16,7 +13,6 @@ public class AlertState : IEnemyState
     public void UpdateState()
     {
         Look();
-        Search();
     }
 
     public void OnTriggerEnter(Collider2D other)
@@ -24,21 +20,30 @@ public class AlertState : IEnemyState
 
     }
 
-    private void ToPatrolState()
+    public void OnEnter()
     {
-        enemy.currentState = enemy.patrolState;
-        searchTimer = 0;
+
     }
 
-    private void ToAlertState()
+    public void OnExit()
     {
-        Debug.LogWarning("Can't transition to same state");
+        Debug.Log("Exiting out of " + enemy.currentState.ToString());
+    }
+
+    private void ToPatrolState()
+    {
+        OnExit();
+        enemy.currentState = enemy.patrolState;
+        enemy.currentState.OnEnter();
+        enemy.searchTimer = 0;
     }
 
     private void ToChaseState()
     {
+        OnExit();
         enemy.currentState = enemy.chaseState;
-        searchTimer = 0;
+        enemy.currentState.OnEnter();
+        enemy.searchTimer = 0;
     }
 
     private void Look()
@@ -49,31 +54,34 @@ public class AlertState : IEnemyState
             enemy.chaseTarget = hits[0].transform;
             ToChaseState();
         }
+        else
+        {
+            Search();
+        }
     }
 
     private void Search()
     {
+
         enemy.spriteRendererFlag.material.color = Color.yellow;
 
-        Quaternion targetRotation;
-
-        if (rotateLeft)
+        if (enemy.facingRight && (enemy.searchTimer <= enemy.searchingDuration / 2))
         {
-            targetRotation = Quaternion.Euler(0, 180, 0); // Rotate left (180 degrees)
+            enemy.targetRotation = Quaternion.Euler(0, 180, 0); // Rotate left (180 degrees)
         }
-        else
+        else if (!enemy.facingRight && (enemy.searchTimer >= enemy.searchingDuration / 2 ))
         {
-            targetRotation = Quaternion.Euler(0, 0, 0); // Rotate right (0 degrees)
+            enemy.targetRotation = Quaternion.Euler(0, 0, 0); // Rotate right (0 degrees)
         }
 
-        enemy.transform.rotation = targetRotation;
+        enemy.transform.rotation = enemy.targetRotation;
 
         // Switch rotation direction
-        rotateLeft = !rotateLeft;
+        enemy.facingRight = !enemy.facingRight;
 
-        searchTimer += Time.deltaTime;
+        enemy.searchTimer += Time.deltaTime;
 
-        if (searchTimer >= enemy.searchingDuration)
+        if (enemy.searchTimer >= enemy.searchingDuration)
         {
             ToPatrolState();
         }

@@ -26,9 +26,14 @@ public class PatrolState : IEnemyState
         }
     }
 
-    public void ToPatrolState()
+    public void OnEnter()
     {
-        Debug.LogWarning("Can't transition to same state");
+
+    }
+
+    public void OnExit()
+    {
+
     }
 
     public void ToAlertState()
@@ -60,6 +65,7 @@ public class PatrolState : IEnemyState
         // Move the enemy towards the next position
         enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, nextPosition, enemy.moveSpeed * Time.deltaTime);
 
+        Rotate(nextPosition);
 
         if (nextWayPoint <= enemy.wayPoints.Length - 1)
         {
@@ -73,6 +79,20 @@ public class PatrolState : IEnemyState
             }
         }
 
+    }
 
+    void Rotate(Vector3 nextPosition)
+    {
+        // Calculate the direction vector from the enemy's position to the next position
+        Vector2 direction = (nextPosition - enemy.transform.position).normalized;
+
+        // Calculate the angle in degrees based on the direction vector
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Limit the rotation angle to either 0 degrees or 180 degrees
+        angle = Mathf.Round(angle / 180.0f) * 180.0f;
+
+        // Rotate the enemy to face the limited angle, only on the Z-axis (2D)
+        enemy.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
     }
 }

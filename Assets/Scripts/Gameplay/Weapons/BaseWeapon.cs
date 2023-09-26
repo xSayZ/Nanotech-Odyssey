@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseWeapon : MonoBehaviour
 {
     [Space]
+    [Range(0.1f, 15f)]
     [SerializeField] public float fireRate = 5f;
     [SerializeField] public float range = 5f;
     public float fireCooldown = 0f;

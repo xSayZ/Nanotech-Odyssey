@@ -21,9 +21,21 @@ public class ChaseState : IEnemyState
 
     }
 
+    public void OnEnter()
+    {
+
+    }
+
+    public void OnExit()
+    {
+
+    }
+
     public void ToAlertState()
     {
+        OnExit();
         enemy.currentState = enemy.alertState;
+        enemy.currentState.OnEnter();
     }
 
     private void Look()
@@ -43,6 +55,17 @@ public class ChaseState : IEnemyState
     private void Chase()
     {
         enemy.spriteRendererFlag.material.color = Color.red;
-        //enemy.transform.position = enemy.chaseTarget.position;
+
+        Vector3 offset = new Vector3(2, 0, 0);
+        Vector3 chasePos = Vector3.MoveTowards(enemy.transform.position, enemy.chaseTarget.position + offset, enemy.moveSpeed * Time.deltaTime);
+        enemy.transform.position = chasePos;
+
+        foreach (var weapon in enemy.weapons)
+        {
+            if (Time.time >= weapon.fireCooldown && weapon.currentAmmo > 0)
+            {
+                weapon.Fire(weapon.transform);
+            }
+        }
     }
 }
