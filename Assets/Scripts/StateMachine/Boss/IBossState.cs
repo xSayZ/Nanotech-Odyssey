@@ -7,4 +7,6 @@ public interface IBossState
     void UpdateState();
 
     void OnTriggerEnter2D(Collider2D other);
+
+    void Move();
 }

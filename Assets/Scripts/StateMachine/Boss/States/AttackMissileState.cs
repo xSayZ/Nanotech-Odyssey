@@ -39,4 +39,9 @@ public class AttackMissileState : IBossState
             ToIdleState();
         }
     }
+
+    public void Move()
+    {
+
+    }
 }

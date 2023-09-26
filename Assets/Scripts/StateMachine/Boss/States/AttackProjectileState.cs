@@ -39,4 +39,9 @@ public class AttackProjectileState : IBossState
             ToIdleState();
         }
     }
+
+    public void Move()
+    {
+        
+    }
 }

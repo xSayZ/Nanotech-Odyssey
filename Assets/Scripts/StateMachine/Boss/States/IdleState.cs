@@ -5,6 +5,7 @@ using UnityEngine;
 public class IdleState : IBossState
 {
     private readonly StatePatternBoss boss;
+    public float attackTimer = 0.0f;
 
     public IdleState(StatePatternBoss statePatternBoss)
     {
@@ -43,20 +44,70 @@ public class IdleState : IBossState
 
     private void ChooseAttack()
     {
-        int randomAttack = Random.Range(0, boss.weapons.Length);
-        Debug.Log("Random attack: " + randomAttack);
+        attackTimer -= Time.deltaTime;
 
-        if(randomAttack == 0)
+        if(attackTimer <= 0)
         {
-            ToAttackProjectileState();
+            // Reset the timer
+            attackTimer = boss.attackDelay;
+
+            int randomAttack = Random.Range(0, boss.weapons.Length);
+            Debug.Log("Random attack: " + randomAttack);
+
+            if (randomAttack == 0)
+            {
+                ToAttackProjectileState();
+            }
+            else if (randomAttack == 1)
+            {
+                ToAttackFireState();
+            }
+            else if (randomAttack == 2)
+            {
+                ToAttackMissileState();
+            }
         }
-        else if (randomAttack == 1)
+    }
+
+    public void Move()
+    {
+        if(boss.attackTarget == null)
         {
-            ToAttackFireState();
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            if (player != null)
+            {
+                boss.attackTarget = player.transform;
+            }
+            else
+            {
+                return;
+            }
         }
-        else if (randomAttack == 2)
+
+        float newYPosition = Mathf.MoveTowards(boss.transform.position.y, boss.attackTarget.position.y, boss.yFollowSpeed * Time.deltaTime);
+        Vector3 newPosition = new Vector3(boss.transform.position.x, newYPosition);
+        boss.transform.position = newPosition;
+
+        boss.xChangeTimer -= Time.deltaTime;
+
+        if(boss.xChangeTimer <= 0)
         {
-            ToAttackMissileState();
+            ChangeRandomXPosition();
         }
+    }
+
+    private void ChangeRandomXPosition()
+    {
+        // Choose a random X-axis position between minX and maxX
+        float randomX = Random.Range(boss.minX, boss.maxX);
+
+        // Set the new X-axis position
+        float newXPosition = Mathf.MoveTowards(boss.transform.position.x, randomX, boss.yFollowSpeed * Time.deltaTime);
+        Vector3 newPosition = new Vector3(newXPosition, boss.transform.position.y);
+        boss.transform.position = newPosition;
+
+        // Reset the X-axis change timer
+        boss.xChangeTimer = boss.xChangeInterval;
     }
 }

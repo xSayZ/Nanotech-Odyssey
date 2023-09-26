@@ -31,4 +31,9 @@ public class AttackFireState : IBossState
     {
         ToIdleState();
     }
+
+    public void Move()
+    {
+
+    }
 }
