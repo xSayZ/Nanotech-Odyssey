@@ -14,13 +14,34 @@ public class PlayerCombatHandler : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private PlayerController controller;
-    [SerializeField] private LaserWeapon laserWeapon;
+    [SerializeField] public LaserWeapon laserWeapon;
     [SerializeField] public Transform firePoint;
     private FireState currentState = FireState.Idle;
     void Awake()
     {
         controller = GetComponent<PlayerController>();
         laserWeapon = GetComponentInChildren<LaserWeapon>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            UIManager uiManager = GameManager.GetInstance().GetComponent<UIManager>();
+
+            if(controller.armor > 1)
+            {
+                
+                controller.armor--;
+                uiManager.UpdateArmor(controller.armor);
+            }
+            else if (controller.armor <= 0)
+            {
+                controller.health--;
+                uiManager.UpdateHP(controller.health);
+            }
+        }
     }
 
     public void HandleWeaponState(bool canFire, bool canReload)

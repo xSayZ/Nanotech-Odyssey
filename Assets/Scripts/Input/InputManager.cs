@@ -66,6 +66,18 @@ public class InputManager : MonoBehaviour
         return aimInput;
     }
 
+    public void InteractPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            interactPressed = true;
+        }
+        else if (context.canceled)
+        {
+            interactPressed = false;
+        }
+    }
+
     public void FirePressed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -102,6 +114,13 @@ public class InputManager : MonoBehaviour
     {
         bool result = reloadPressed;
         reloadPressed = false;
+        return result;
+    }
+
+    public bool GetInteractPressed()
+    {
+        bool result = reloadPressed;
+        interactPressed = false;
         return result;
     }
 

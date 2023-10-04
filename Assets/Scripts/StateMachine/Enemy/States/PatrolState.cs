@@ -28,7 +28,7 @@ public class PatrolState : IEnemyState
 
     public void OnEnter()
     {
-
+        enemy.indicator.sprite = enemy.indicators[2];
     }
 
     public void OnExit()
@@ -48,22 +48,28 @@ public class PatrolState : IEnemyState
 
     private void Look()
     {
-        var hits = new List<RaycastHit2D>();
-        if (Physics2D.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.right, enemy.contactFilter, hits, enemy.sightRange) > 0)
+        var hit = Physics2D.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.right, enemy.sightRange);
+        Debug.DrawRay(enemy.eyes.transform.position, enemy.eyes.transform.right * enemy.sightRange, Color.yellow); // Optional: Visualize the ray.
+
+
+        if (hit.collider != null && hit.transform.gameObject.CompareTag("Player"))
         {
-            enemy.chaseTarget = hits[0].transform;
+            enemy.chaseTarget = hit.transform;
             ToChaseState();
+            Debug.DrawRay(enemy.eyes.transform.position, enemy.eyes.transform.right * enemy.sightRange);
         }
     }
+
     void Patrol()
     {
-        enemy.spriteRendererFlag.material.color = Color.green;
-
         // Get the next position based on the waypoint
         Vector3 nextPosition = enemy.wayPoints[nextWayPoint].position;
 
         // Move the enemy towards the next position
         enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, nextPosition, enemy.moveSpeed * Time.deltaTime);
+        Debug.Log(nextPosition);
+
+        enemy.animator.Play("Swarmbot_Run");
 
         Rotate(nextPosition);
 
@@ -93,6 +99,6 @@ public class PatrolState : IEnemyState
         angle = Mathf.Round(angle / 180.0f) * 180.0f;
 
         // Rotate the enemy to face the limited angle, only on the Z-axis (2D)
-        enemy.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+        enemy.transform.localRotation = Quaternion.Euler(new Vector3(0, angle, 0));
     }
 }

@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset x1_0
+      name: wall_top_corner_left2
       rect:
         serializedVersion: 2
         x: 64
@@ -138,7 +138,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -171,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_2
+      name: wall_top_divide_right
       rect:
         serializedVersion: 2
         x: 128
@@ -180,7 +180,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -201,7 +201,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_4
+      name: wall_top_divide_left
       rect:
         serializedVersion: 2
         x: 192
@@ -222,7 +222,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_6
+      name: wall_top_corner_right2
       rect:
         serializedVersion: 2
         x: 256
@@ -264,7 +264,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_16
+      name: wall_small_corner_right
       rect:
         serializedVersion: 2
         x: 64
@@ -528,7 +528,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_20
+      name: wall_end_top_right
       rect:
         serializedVersion: 2
         x: 224
@@ -549,7 +549,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_21
+      name: wall_small_corner_left
       rect:
         serializedVersion: 2
         x: 256
@@ -747,7 +747,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 24, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -810,7 +810,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 24, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1053,7 +1053,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_80
+      name: wall_cross_up_right
       rect:
         serializedVersion: 2
         x: 32
@@ -1074,7 +1074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_81
+      name: wall_cross_up_left
       rect:
         serializedVersion: 2
         x: 288
@@ -1263,7 +1263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_98
+      name: wall_y_right
       rect:
         serializedVersion: 2
         x: 32
@@ -1284,7 +1284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_99
+      name: wall_y_left
       rect:
         serializedVersion: 2
         x: 288
@@ -1671,7 +1671,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 24, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1746,7 +1746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_141
+      name: wall_bottom_hook_left
       rect:
         serializedVersion: 2
         x: 64
@@ -1872,27 +1872,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_147
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34fc4b3f4e6dbb34e824310efceb776a
-      internalID: 151017306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tileset x1_149
       rect:
         serializedVersion: 2
@@ -1977,7 +1956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_158
+      name: wall_bottom_divide_left
       rect:
         serializedVersion: 2
         x: 96
@@ -2028,7 +2007,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2061,7 +2040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset x1_162
+      name: wall_bottom_divide_right
       rect:
         serializedVersion: 2
         x: 224
@@ -4939,7 +4918,6 @@ TextureImporter:
       liquid_top_corner_left: -143339729
       liquid_top_corner_right: -1084600602
       liquid_top_middle: -732116149
-      tileset x1_0: -1259043965
       tileset x1_1: -118858614
       tileset x1_10: -1087001817
       tileset x1_100: -1697874371
@@ -4986,7 +4964,6 @@ TextureImporter:
       tileset x1_138: -1072040556
       tileset x1_139: -1773387810
       tileset x1_14: -1704880117
-      tileset x1_141: 2022518073
       tileset x1_142: -356029655
       tileset x1_143: -1598529368
       tileset x1_144: 1471398647
@@ -5003,11 +4980,8 @@ TextureImporter:
       tileset x1_155: 1540613512
       tileset x1_156: 2114795731
       tileset x1_157: -786406529
-      tileset x1_158: -8410938
       tileset x1_159: -1209142883
-      tileset x1_16: 1806957370
       tileset x1_161: -967395349
-      tileset x1_162: 698332420
       tileset x1_164: 1634314161
       tileset x1_165: 1671797895
       tileset x1_166: 881368099
@@ -5047,8 +5021,6 @@ TextureImporter:
       tileset x1_197: 219918678
       tileset x1_198: -199349628
       tileset x1_199: -1683894104
-      tileset x1_2: 232027770
-      tileset x1_20: 641193865
       tileset x1_200: 1449370593
       tileset x1_201: -1191546662
       tileset x1_202: 999489420
@@ -5059,7 +5031,6 @@ TextureImporter:
       tileset x1_207: 1856654793
       tileset x1_208: 1529618529
       tileset x1_209: 914974480
-      tileset x1_21: -229962534
       tileset x1_210: 795942858
       tileset x1_211: -1993172781
       tileset x1_212: 1069945034
@@ -5177,7 +5148,6 @@ TextureImporter:
       tileset x1_35: -1012960584
       tileset x1_36: 1749429028
       tileset x1_37: -400586045
-      tileset x1_4: 579439642
       tileset x1_44: -790852596
       tileset x1_45: -1630221040
       tileset x1_47: -1224268508
@@ -5190,7 +5160,6 @@ TextureImporter:
       tileset x1_53: -999279333
       tileset x1_54: -991949278
       tileset x1_55: -2093169778
-      tileset x1_6: -1163796123
       tileset x1_60: 1900615106
       tileset x1_61: 1717326087
       tileset x1_62: 139780060
@@ -5210,8 +5179,6 @@ TextureImporter:
       tileset x1_78: 1172468154
       tileset x1_79: 1607118803
       tileset x1_8: -1865289057
-      tileset x1_80: 1093316798
-      tileset x1_81: 681761228
       tileset x1_82: -1307853170
       tileset x1_83: -1969371419
       tileset x1_84: 2142786106
@@ -5229,14 +5196,26 @@ TextureImporter:
       tileset x1_95: 984035902
       tileset x1_96: 1835603127
       tileset x1_97: 1238875312
-      tileset x1_98: -963252630
-      tileset x1_99: 967851231
+      wall_bottom_divide_left: -8410938
+      wall_bottom_divide_right: 698332420
+      wall_bottom_hook_left: 2022518073
       wall_bottom_hook_right: -2083356321
       wall_bottom_middle: -60703906
       wall_corner_bottom_left: -2134912030
       wall_corner_bottom_right: -982004774
+      wall_cross_up_left: 681761228
+      wall_cross_up_right: 1093316798
+      wall_end_top_right: 641193865
       wall_left: -378790095
       wall_right: -685691524
+      wall_small_corner_left: -229962534
+      wall_small_corner_right: 1806957370
+      wall_top_corner_left2: -1259043965
+      wall_top_corner_right2: -1163796123
+      wall_top_divide_left: 579439642
+      wall_top_divide_right: 232027770
+      wall_y_left: 967851231
+      wall_y_right: -963252630
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

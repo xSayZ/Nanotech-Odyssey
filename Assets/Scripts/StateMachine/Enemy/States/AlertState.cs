@@ -22,12 +22,12 @@ public class AlertState : IEnemyState
 
     public void OnEnter()
     {
-
+        enemy.indicator.sprite = enemy.indicators[0];
     }
 
     public void OnExit()
     {
-        Debug.Log("Exiting out of " + enemy.currentState.ToString());
+
     }
 
     private void ToPatrolState()
@@ -48,10 +48,13 @@ public class AlertState : IEnemyState
 
     private void Look()
     {
-        var hits = new List<RaycastHit2D>();
-        if (Physics2D.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, enemy.contactFilter, hits, enemy.sightRange) > 0)
+
+        var hit = Physics2D.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.right, enemy.sightRange);
+        Debug.DrawRay(enemy.eyes.transform.position, hit.point * enemy.sightRange, Color.yellow); // Optional: Visualize the ray.
+
+        if (hit.collider != null && hit.transform.gameObject.CompareTag("Player"))
         {
-            enemy.chaseTarget = hits[0].transform;
+            enemy.chaseTarget = hit.transform;
             ToChaseState();
         }
         else
@@ -62,8 +65,7 @@ public class AlertState : IEnemyState
 
     private void Search()
     {
-
-        enemy.spriteRendererFlag.material.color = Color.yellow;
+        enemy.indicator.sprite = enemy.indicators[1];
 
         if (enemy.facingRight && (enemy.searchTimer <= enemy.searchingDuration / 2))
         {
@@ -83,6 +85,7 @@ public class AlertState : IEnemyState
 
         if (enemy.searchTimer >= enemy.searchingDuration)
         {
+     
             ToPatrolState();
         }
     }

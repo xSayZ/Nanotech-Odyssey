@@ -16,7 +16,6 @@ public class BaseWeapon : MonoBehaviour
     [SerializeField] public AudioClip audioClip;
     [SerializeField] public GameObject projectile;
 
-
     void Start()
     {
         currentAmmo = maxAmmo;
@@ -26,14 +25,11 @@ public class BaseWeapon : MonoBehaviour
     {
         fireCooldown = Time.time + 1f / fireRate;
         currentAmmo--;
-        projectile = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
-
-        Debug.Log("Brrrr Brrrr");
+        Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
     }
 
     public virtual void Reload()
     {
         currentAmmo = maxAmmo;
-        Debug.Log("Tsch tsch");
     }
 }

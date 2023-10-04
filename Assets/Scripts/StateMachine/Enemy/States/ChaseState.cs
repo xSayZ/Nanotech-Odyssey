@@ -23,7 +23,7 @@ public class ChaseState : IEnemyState
 
     public void OnEnter()
     {
-
+        enemy.indicator.sprite = enemy.indicators[2];
     }
 
     public void OnExit()
@@ -40,13 +40,17 @@ public class ChaseState : IEnemyState
 
     private void Look()
     {
-        var hits = new List<RaycastHit2D>();
-        Vector2 enemyToTarget = (enemy.chaseTarget.position + enemy.offset) - enemy.eyes.transform.position;
-        if (Physics2D.Raycast(enemy.eyes.transform.position, enemyToTarget, enemy.contactFilter, hits, enemy.sightRange) > 0)
+        Vector2 enemyToPlayer = (enemy.chaseTarget.position - enemy.eyes.transform.position).normalized;
+
+        var hit = Physics2D.Raycast(enemy.eyes.transform.position, enemyToPlayer, enemy.sightRange);
+
+        if (hit.collider != null && hit.transform.gameObject.CompareTag("Player"))
         {
-            enemy.chaseTarget = hits[0].transform;
+            enemy.chaseTarget = hit.transform; // Set the chase target.
+            Debug.DrawRay(enemy.eyes.transform.position, enemyToPlayer * hit.distance, Color.red); // Optional: Visualize the ray.
+            Debug.Log("Player hit");
         }
-        else
+        else if (hit.collider == null || !hit.transform.gameObject.CompareTag("Player")) 
         {
             ToAlertState();
         }
@@ -54,17 +58,18 @@ public class ChaseState : IEnemyState
 
     private void Chase()
     {
-        enemy.spriteRendererFlag.material.color = Color.red;
-
-        Vector3 offset = new Vector3(2, 0, 0);
+        Vector3 offset = new Vector3(2, -0.2f, 0);
         Vector3 chasePos = Vector3.MoveTowards(enemy.transform.position, enemy.chaseTarget.position + offset, enemy.moveSpeed * Time.deltaTime);
         enemy.transform.position = chasePos;
+        enemy.animator.Play("Swarmbot_Run");
 
         foreach (var weapon in enemy.weapons)
         {
             if (Time.time >= weapon.fireCooldown && weapon.currentAmmo > 0)
             {
-                weapon.Fire(weapon.transform);
+                weapon.Fire(enemy.eyes.transform);
+                enemy.animator.Play("Swarmbot_Fire");
+
             }
         }
     }

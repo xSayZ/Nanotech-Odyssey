@@ -17,4 +17,13 @@ public class Projectile : MonoBehaviour
     {
         rb.velocity = transform.right * projectileSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Level"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+

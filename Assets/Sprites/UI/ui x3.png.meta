@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -114,7 +114,7 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 0, z: 6, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -357,13 +357,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_12
+      name: ui_armor_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 903
-        width: 21
-        height: 21
+        x: 11
+        y: 902
+        width: 72
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,13 +378,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_13
+      name: ui_armor_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 903
-        width: 21
-        height: 21
+        x: 107
+        y: 902
+        width: 72
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,13 +399,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_14
+      name: ui_armor_2
       rect:
         serializedVersion: 2
-        x: 60
-        y: 903
-        width: 21
-        height: 21
+        x: 203
+        y: 902
+        width: 72
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,13 +420,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_15
+      name: ui_armor_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 903
-        width: 21
-        height: 21
+        x: 299
+        y: 902
+        width: 72
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,174 +436,6 @@ TextureImporter:
       bones: []
       spriteID: 862aeb23bcec18d459d95ca083c0bcc2
       internalID: 1051422002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_16
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9da7f08e1e9cd414b99f32628c63281a
-      internalID: -755539445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_17
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37da03bb98fb5fe43860993fdfec707a
-      internalID: 198163836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_18
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5680b204650d80e4a96ad071974263e3
-      internalID: 534586788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_19
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 640f90835fa5a3c42972e1536d9703c5
-      internalID: -522138337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_20
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d75bac71498db784b9eb20b45f4ac00b
-      internalID: -928328001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_21
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f21ecc00dfbc7f4e90228888c3bdfc3
-      internalID: -1635032224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_22
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 888c1c361c362eb41a874521e90a9a9d
-      internalID: 1771355194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui x3_23
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 903
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ab15058ac0b8284dbc992465b8b46cb
-      internalID: 1383254926
       vertices: []
       indices: 
       edges: []
@@ -1386,7 +1218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_61
+      name: indicator_dialogue
       rect:
         serializedVersion: 2
         x: 36
@@ -1407,7 +1239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_62
+      name: indicator_question_mark
       rect:
         serializedVersion: 2
         x: 132
@@ -1428,7 +1260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_63
+      name: indicator_quest
       rect:
         serializedVersion: 2
         x: 228
@@ -1449,7 +1281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui x3_64
+      name: indicator_alert
       rect:
         serializedVersion: 2
         x: 324
@@ -1898,7 +1730,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1919,7 +1751,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1940,7 +1772,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1961,7 +1793,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1982,7 +1814,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2003,7 +1835,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2024,7 +1856,7 @@ TextureImporter:
         width: 192
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2047,14 +1879,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      indicator_alert: -2016582135
+      indicator_dialogue: -1698329221
+      indicator_quest: 61138211
+      indicator_question_mark: -1024779568
       ui x3_0: 908576581
       ui x3_1: -1717298142
       ui x3_10: -881634234
       ui x3_11: -1838157038
-      ui x3_12: -922500127
-      ui x3_13: 277939573
-      ui x3_14: 1958603447
-      ui x3_15: 1051422002
       ui x3_16: -755539445
       ui x3_17: 198163836
       ui x3_18: 534586788
@@ -2105,10 +1937,6 @@ TextureImporter:
       ui x3_59: 1531612822
       ui x3_6: 1614180053
       ui x3_60: 1573285287
-      ui x3_61: -1698329221
-      ui x3_62: -1024779568
-      ui x3_63: 61138211
-      ui x3_64: -2016582135
       ui x3_65: 1148515082
       ui x3_66: -237279277
       ui x3_67: 47534223
@@ -2139,6 +1967,11 @@ TextureImporter:
       ui x3_9: 976150646
       ui x3_90: -573369742
       ui x3_91: 429599458
+      ui x3_92: 389845755
+      ui_armor_0: -922500127
+      ui_armor_1: 277939573
+      ui_armor_2: 1958603447
+      ui_armor_3: 1051422002
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
