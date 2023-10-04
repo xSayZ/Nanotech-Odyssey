@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IEnemyState
+namespace Enemy
 {
-    void UpdateState();
+    public interface IEnemyState
+    {
+        void UpdateState();
+        void OnTriggerEnter(Collider2D other);
+        void OnEnter();
+        void OnExit();
 
-    void OnTriggerEnter(Collider2D other);
-
-    void OnEnter();
-
-    void OnExit();
-
+    }
 }
+

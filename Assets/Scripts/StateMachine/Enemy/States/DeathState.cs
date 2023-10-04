@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathState : IEnemyState
+namespace Enemy
 {
-    private readonly StatePatternEnemy enemy;
-    public DeathState(StatePatternEnemy statePatternEnemy)
+    public class DeathState : IEnemyState
     {
-        enemy = statePatternEnemy;
+        private readonly StatePatternEnemy enemy;
+        public DeathState(StatePatternEnemy statePatternEnemy)
+        {
+            enemy = statePatternEnemy;
+        }
+
+        void IEnemyState.OnEnter()
+        {
+            enemy.animator.Play(enemy.DeathAnimation);
+            enemy.Death();
+        }
+
+        void IEnemyState.OnExit() { }
+
+        void IEnemyState.OnTriggerEnter(Collider2D other) { }
+
+        void IEnemyState.UpdateState() { }
     }
-
-    void IEnemyState.OnEnter()
-    {
-        enemy.animator.Play("Swarmbot_Death");
-        enemy.Death();
-    }
-
-    void IEnemyState.OnExit() { }
-
-    void IEnemyState.OnTriggerEnter(Collider2D other) { }
-
-    void IEnemyState.UpdateState() { }
 }

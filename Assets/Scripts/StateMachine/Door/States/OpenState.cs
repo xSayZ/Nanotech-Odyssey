@@ -23,11 +23,15 @@ namespace World
 
         public void OnEnter()
         {
-            // Play sound
+            door.audioSource.PlayOneShot(door.openSound);
             door.animator.Play(door.OpenAnimation);
         }
 
-        public void OnExit() { door.animator.Play(door.CloseAnimation); }
+        public void OnExit()
+        {
+            door.animator.Play(door.CloseAnimation);
+            door.audioSource.PlayOneShot(door.openSound);
+        }
 
         private void ToIdleState()
         {

@@ -12,6 +12,7 @@ public class PlayerCombatHandler : MonoBehaviour
         Reloading
     }
 
+    #region
     [Header("References")]
     [SerializeField] private PlayerController controller;
     [SerializeField] public LaserWeapon laserWeapon;
@@ -28,22 +29,29 @@ public class PlayerCombatHandler : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Projectile"))
         {
-            UIManager uiManager = GameManager.GetInstance().GetComponent<UIManager>();
+            Projectile collidedProjectile = collision.gameObject.GetComponent<Projectile>();
 
-            if(controller.armor > 1)
+            // Check if the projectile owner is not the enemy itself
+            if (collidedProjectile.owner != gameObject)
             {
-                
-                controller.armor--;
-                uiManager.UpdateArmor(controller.armor);
-            }
-            else if (controller.armor <= 0)
-            {
-                controller.health--;
-                uiManager.UpdateHP(controller.health);
+                UIManager uiManager = GameManager.GetInstance().GetComponent<UIManager>();
+
+                if (controller.armor >= 1)
+                {
+                    controller.armor--;
+                    uiManager.UpdateArmor(controller.armor);
+                }
+                else if (controller.armor <= 0)
+                {
+                    controller.health--;
+                    uiManager.UpdateHP(controller.health);
+                }
+
+                Destroy(collidedProjectile.gameObject);
             }
         }
     }
-
+    #endregion
     public void HandleWeaponState(bool canFire, bool canReload)
     {
         switch (currentState)
@@ -53,6 +61,7 @@ public class PlayerCombatHandler : MonoBehaviour
                 {
                     currentState = FireState.Firing;
 
+                    controller.audioSource.PlayOneShot(laserWeapon.audioClip);
                     laserWeapon.Fire(firePoint);
                     controller.OnFire();
                 }
@@ -68,6 +77,7 @@ public class PlayerCombatHandler : MonoBehaviour
                 }
                 else if (canFire && Time.time >= laserWeapon.fireCooldown && laserWeapon.currentAmmo > 0)
                 {
+                    controller.audioSource.PlayOneShot(laserWeapon.audioClip);
                     laserWeapon.Fire(firePoint);
                     controller.OnFire();
                 }

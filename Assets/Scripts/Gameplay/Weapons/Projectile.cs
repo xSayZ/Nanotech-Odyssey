@@ -5,7 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] private float projectileSpeed = 4f;
+    [SerializeField] private float projectileSpeed = 10f;
+    public GameObject owner; // Reference to the character who fired the projectile
+
 
     private void Awake()
     {

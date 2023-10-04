@@ -6,8 +6,9 @@ namespace World
 {
     public class DoorStatePattern : MonoBehaviour
     {
-        public float openTime;
-        public SpriteRenderer spriteRendererFlag;
+
+        public AudioClip openSound;
+        public AudioSource audioSource;
 
         [SerializeField] public string IdleAnimation;
         [SerializeField] public string OpenAnimation;
@@ -22,6 +23,7 @@ namespace World
 
         private void Awake()
         {
+            audioSource = FindObjectOfType<AudioSource>();
             doorSprite = GetComponentInChildren<SpriteRenderer>();
             animator = GetComponentInChildren<Animator>();
             idleState = new IdleState(this);

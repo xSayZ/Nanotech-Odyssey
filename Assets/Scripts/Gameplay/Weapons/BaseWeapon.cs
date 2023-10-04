@@ -15,7 +15,6 @@ public class BaseWeapon : MonoBehaviour
     [Space]
     [SerializeField] public AudioClip audioClip;
     [SerializeField] public GameObject projectile;
-
     void Start()
     {
         currentAmmo = maxAmmo;
@@ -25,7 +24,8 @@ public class BaseWeapon : MonoBehaviour
     {
         fireCooldown = Time.time + 1f / fireRate;
         currentAmmo--;
-        Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
+        GameObject newProjectile = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
+        newProjectile.GetComponent<Projectile>().owner = transform.root.gameObject; // Assign the owner
     }
 
     public virtual void Reload()

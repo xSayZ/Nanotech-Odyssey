@@ -14,12 +14,15 @@ public class IdleState : IBossState
 
     public void UpdateState()
     {
-        ChooseAttack();
+        
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ChooseAttack();
+        }
     }
 
     private void ToIdleState()

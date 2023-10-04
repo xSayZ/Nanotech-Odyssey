@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerCombatHandler combat;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public AudioSource audioSource;
 
     Vector2 movementInput;
     Vector2 aimInput;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         combat = GetComponent<PlayerCombatHandler>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 
         UIManager uiManager = GameManager.GetInstance().GetComponent<UIManager>();
 
@@ -36,7 +38,6 @@ public class PlayerController : MonoBehaviour
             uiManager.maxHP = health;
             uiManager.maxAmmo = combat.laserWeapon.maxAmmo;
             uiManager.UpdateArmor(armor);
-            uiManager.UpdateBulletCount(combat.laserWeapon.currentAmmo);
             uiManager.UpdateHP(health);
         }
     }
@@ -49,6 +50,10 @@ public class PlayerController : MonoBehaviour
         if(health <= 0)
         {
             animator.SetInteger("Health", 0);
+
+            Destroy(gameObject, 1f);
+
+            GameManager.GetInstance().Restart();
         }
 
         AdjustSortingLayer();

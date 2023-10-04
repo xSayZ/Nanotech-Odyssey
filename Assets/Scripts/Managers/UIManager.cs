@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     public void UpdateHP(int hpValue)
     {
         hpText.text = hpValue.ToString() + "/" + maxHP;
-        hpSlider.value = hpValue / 3;
+        hpSlider.value = hpValue;
     }
 
     public void UpdateArmor(int armorValue)
